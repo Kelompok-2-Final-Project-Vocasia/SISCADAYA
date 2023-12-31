@@ -6,6 +6,7 @@ import Situs from "../../Assets/situs.png"
 import Struktur from "../../Assets/struktur.png"
 
 const Type = () => {
+  //komponen render list
   const workInfoData = [
     {
       image: Patung,
@@ -38,11 +39,8 @@ const Type = () => {
       <div className="work-section-top">
         <p className="primary-subheading">Jenis</p>
         <h1 className="primary-heading">5 Jenis Cagar Budaya</h1>
-        {/* <p className="primary-text">
-          Lorem ipsum dolor sit amet consectetur. Non tincidunt magna non et
-          elit. Dolor turpis molestie dui magnis facilisis at fringilla quam.
-        </p> */}
       </div>
+    //rendering list
       <div className="work-section-bottom">
         {workInfoData.map((data) => (
           <div className="work-section-info" key={data.title}>
