@@ -4,6 +4,7 @@ import Monas from "../../Assets/monas.png";
 import Museum from "../../Assets/museum.png";
 
 const Work = () => {
+  //komponen render list
   const workInfoData = [
     {
       image: Canbod,
@@ -24,6 +25,7 @@ const Work = () => {
         <p className="primary-subheading">Rekomendasi</p>
         <h1 className="primary-heading">3 Rekomendasi Cagar Budaya</h1>
       </div>
+    //rendering list
       <div className="work-section-bottom">
         {workInfoData.map((data) => (
           <div className="work-section-info" key={data.title}>
