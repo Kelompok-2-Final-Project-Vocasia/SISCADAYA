@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Reem Kufi", sans-serif !important;
-  /* background-color: red; */
 }
 img {
   max-width: 100%;
@@ -185,9 +184,6 @@ nav {
   margin-right: 1.25rem;
   color: #585858;
 }
-/* .footer-section-one {
-  border: 2px solid blue;
-} */
 .footer-section-two {
   flex: 1;
   display: flex;
