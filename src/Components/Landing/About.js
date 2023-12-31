@@ -1,8 +1,8 @@
 import React from "react";
 import AboutBackground from "../../Assets/about-background.png";
 import AboutBackgroundImage from "../../Assets/aboutu-background.png";
-import { BsFillPlayCircleFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { BsFillPlayCircleFill } from "react-icons/bs"; //button play video
+import { Link } from "react-router-dom"; //navigate
 
 
 const About = ({type, onClick}) => {
@@ -25,6 +25,7 @@ const About = ({type, onClick}) => {
         <p className="primary-text">
         Tech Stack yang akan digunakan dalam pembuatan sistem ini adalah Node JS, React JS,  UI Component Chakra UI & Github.
         </p>
+    //navigasi ke page video
         <Link to='/video' className="about-buttons-container">
           <button className="watch-video-button" onClick={onClick} type={type}>
             <BsFillPlayCircleFill /> Watch Video
