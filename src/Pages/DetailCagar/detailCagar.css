@@ -1,0 +1,175 @@
+*{
+	font-family: "Reem Kufi", sans-serif !important;
+}
+
+.cagar-img {
+	height: 500px;
+}
+
+.detail-content {
+	margin-top: 90px;
+}
+
+.cat-img {
+	position: relative;
+}
+
+.category-card {
+	background-color: #3B7CEB;
+	border-radius: 0 0 10px 10px;
+	width: 150px;
+	height: 40px;
+	position: absolute;
+	right: 40px;
+	margin-top: -18px;
+	color: #ffffff;
+}
+
+.shadow-cat-card {
+	border-radius: 0 0 10px 10px;
+	border: 1px solid #87CEEB;
+	width: 150px;
+	height: 30px;
+	position: absolute;
+	right: 30px;
+}
+
+.cagar-title {
+	font-size: clamp(1rem, 3vw, 1.5rem);
+	max-width: 500px;
+	margin-top: 5px; 
+	margin-bottom: 3px;
+}
+
+/* .cagar-title:hover {
+	color: #876546;
+} */
+
+.author-icon {
+	width: 34px;
+	height: 34px;
+	padding: 7px 6px 6px 6px;
+}
+
+.author {
+	font-size: 14px;
+}
+
+.date {
+	font-size: 12px;
+}
+
+.card-action ul li {
+	margin-left: 20px;
+}
+
+.card-action ul li a {
+	transition: 0.5s;
+}
+
+.edit-card,
+.delete-card {
+	width: 70px;
+	height: 45px;
+}
+
+.edit-card:hover,
+.delete-card:hover {
+	background-color: #3B7CEB;
+	border-radius: 15px;
+	transition: 0.5s;
+}
+
+.tabs {
+	color:  #191970;
+}
+
+.tabs:focus{
+	color: #ffffff;
+}
+
+.tabs-active-tabs {
+	font-weight: 500;
+	background-color: #3B7CEB !important;
+	border-top-left-radius: 10px !important;
+	border-top-right-radius: 10px !important;
+}
+
+.tabs-active-tabs:focus {
+	background-color: #3B7CEB solid !important;
+	border-radius:  10px 10px 0 0 !important;
+	color: #ffffff;
+}
+
+.nav-item {
+	border: 1px solid #87CEEB !important;
+	border-radius: 10px 10px 0 0;
+	border-bottom: 0 !important;
+	margin-right: 1px;
+}
+
+.nav-tabs .nav-link {
+	border: 5px !important;
+}
+
+.tabs .nav-link {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	color: #ffffff;
+}
+
+.tab-content {
+	padding: 0 10px 0 10px;
+	border: 2px solid #87CEEB !important;
+	border-radius: 5px;
+}
+
+@media (min-width: 199px) and (max-width: 349px) {
+	.cagar-img {
+		height: 150px;
+	}
+}
+
+@media (min-width: 350px) and (max-width: 399px) {
+	.cagar-img {
+		height: 200px;
+	}
+}
+
+@media (min-width: 400px) and (max-width: 549px) {
+	.cagar-img {
+		height: 250px;
+	}
+}
+
+@media (min-width: 550px) and (max-width: 767px) {
+	.cagar-img {
+		height: 300px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 995px) {
+	.cagar-img {
+		height: 400px;
+	}
+}
+
+@media screen and (max-width: 399px) {
+    .cagar-title {
+        font-size: 18px;
+    }
+
+	.category-card {
+		font-size: 14px;
+	}
+
+	.category-card {
+		width: 120px;
+		height: 40px;
+	}
+	
+	.shadow-cat-card {
+		width: 120px;
+		height: 30px;
+	}
+}

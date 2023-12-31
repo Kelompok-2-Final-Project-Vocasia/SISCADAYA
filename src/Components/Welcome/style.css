@@ -1,0 +1,28 @@
+.theBG{
+    height: 100vh;
+    background: url("../../Assets/thebg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .gobutton {
+    padding: 0.5rem 1rem;
+    background-color: #3B7CEB;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: white;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -15rem;
+    margin-left: 40rem;
+  }
+
+  .p{
+    text-decoration: none;
+    padding-top: 0.25rem;
+  }

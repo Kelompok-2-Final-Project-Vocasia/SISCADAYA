@@ -1,0 +1,67 @@
+.card:hover,
+.card:focus {
+    transform: translateY(5px);
+}
+
+.card-body {
+    background-color: #3B7CEB;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.photo {
+    height: 250px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.card-cagar-title:hover {
+    color: #F5DEB3;
+}
+
+.card-cagar-title {
+    color: #ffffff;
+    line-height: 1.2rem;
+}
+
+.card-city{
+    font-weight: 550;
+    color: #ffffff;
+}
+
+.card-category {
+    background-color: #3B7CEB;
+    padding: 10px;
+    color: #ffffff;
+    top: 10px;
+    right: 10px;
+}
+
+.card-category:hover {
+    border: 1px solid;
+    background-color: #87CEEB;
+    color: #ffffff;
+}
+
+.city-map {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 299px) {
+    .photo {
+        height: 170px;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+	.photo {
+        height: 200px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 999px) {
+	.photo {
+        height: 230px;
+    }
+}
