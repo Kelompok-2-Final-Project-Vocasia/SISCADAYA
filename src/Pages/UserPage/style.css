@@ -2,28 +2,6 @@
     margin: 0;
     font-family: "Reem Kufi", sans-serif !important;
   }
-  /* .navbar-light {
-    color: azure;
-    position: absolute;
-    top: 20px;
-    right: 0;
-  }
-  .navbar-light > .container{
-    text-align: center;
-  
-  }
-  .navbar-light > .container > h4{
-      background-color: black;
-      font-weight: bold;
-      width: 180px;
-      padding: 10px 0;
-      border-radius: 20px;
-  }
-  
-  p{
-    font-size: large;
-  } */
-  
   
   /* ==================================== */
     .outer {
@@ -89,7 +67,6 @@
       border-radius: 1rem;
       font-size: 1.1rem;
       cursor: pointer;
-      /* font-weight: 600; */
       color: white;
       transition: 0.2s;
       display: flex;
