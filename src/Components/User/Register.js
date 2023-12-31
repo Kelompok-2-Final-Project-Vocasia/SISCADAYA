@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-// import { Alert } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Login from "./Login";
 import swal from "sweetalert"
@@ -18,6 +17,7 @@ function Registration() {
   const [flag, setFlag] = useState(false);
   const [login, setLogin] = useState(true);
 
+  //fetch to database
   const handleRegister = async (event) => {
     event.preventDefault()
     await axios.post("http://localhost:4000/register", user)
