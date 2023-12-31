@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      // Mengaitkan User dengan model Comment dan Cagarbudaya
       User.hasMany(models.Comment, {
         foreignKey: "userId",
         as: "comments"
@@ -53,6 +53,7 @@ module.exports = (sequelize, DataTypes) => {
     modelName: "User",
   });
   User.beforeCreate(async (user, options) => {
+    // Mengubah Password menjadi nilai hash / Hashing Password
     const hashedPassword = await bcrypt.hash(user.password, 10);
     user.password = hashedPassword;
   });

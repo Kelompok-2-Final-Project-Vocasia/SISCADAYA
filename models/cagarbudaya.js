@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      // Mengaitkan Cagarbudaya dengan model Kategori, User, dan Comment
       Cagarbudaya.belongsTo(models.Kategori, {
         foreignKey: "kategoriId",
         as: "kategoris", 
