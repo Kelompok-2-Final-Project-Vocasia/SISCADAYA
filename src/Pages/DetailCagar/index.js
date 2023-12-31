@@ -1,11 +1,7 @@
-
 import React, { useEffect, useState } from 'react'
 import swal from 'sweetalert';
 import { Nav, NavItem, NavLink, TabContent, TabPane } from 'reactstrap';
-// import { Gap, Loading } from '../../components/atoms';
 import { useParams } from 'react-router-dom'
-// import { deleteCulturalHeritage, getDetailCultureHeritage } from '../../utils/culturalHeritageHandler';
-// import { AuthorIcon } from '../../assets';
 import './detailCagar.css'
 import { deleteCagarBudaya, getSinggleCagarBudaya } from '../../utils/cagarBudaya';
 import Navbar from '../../Components/Landing/Navbar';
@@ -108,10 +104,7 @@ const DetailCagar = () => {
                             </TabPane>
                         </TabContent>
                     </article>
-
-                    
                     <Comments />
-
                 </article>
                 </div>
             )
