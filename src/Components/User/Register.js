@@ -7,13 +7,13 @@ import { Link } from "react-router-dom";
 
 function Registration() {
   const navigate = useNavigate()
+  //menggunakan react hooks dengan useState
   const [user, setUser] = useState({
     username: "",
     nama: "",
     email: "",
     password: ""
 })
-
   const [flag, setFlag] = useState(false);
   const [login, setLogin] = useState(true);
 
@@ -50,7 +50,8 @@ function Registration() {
           {login ? (
             <form action="">
               <h3>Register</h3>
-
+            
+            {/* input username */}
               <div className="form-group">
                 <label>Username</label>
                 <input
@@ -113,14 +114,6 @@ function Registration() {
 
               <Link to='/login' className="forgot-password text-right">Already registered?</Link>
 
-              {/* <p onClick={handleClick} className="forgot-password text-right">
-                Already registered{" "}log in?
-              </p> */}
-              {/* {flag && (
-                <Alert color="primary" variant="danger">
-                  I got it you are in hurry! But every Field is important!
-                </Alert>
-              )} */}
             </form>
           ) : (
             <Login />
