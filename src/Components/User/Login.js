@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Login() {
+  //react hooks dengan useState
   const navigate = useNavigate()
   const [user, setUser] = useState({
       email: "",
@@ -24,6 +25,7 @@ function Login() {
       if (data.data.isAdmin == 1) {
         navigate("/admin/cagar-budaya");
       } else {
+        // jika sukses
         navigate("/cagar-budaya");
       }
       localStorage.setItem("userId", data.data.user);
