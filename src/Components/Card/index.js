@@ -1,6 +1,7 @@
 import React from 'react';
 import "./card.css";
 
+//template card
 const Card = (props) => {
 const { id, nama, alamat, kabupaten, kategoris } = props;
   return (
