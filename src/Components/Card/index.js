@@ -1,7 +1,7 @@
 import React from 'react';
 import "./card.css";
 
-//template card
+//template card sebagai tempat fetch data dari be
 const Card = (props) => {
 const { id, nama, alamat, kabupaten, kategoris } = props;
   return (
