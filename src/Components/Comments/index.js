@@ -6,16 +6,6 @@ import { onAddComment } from '../../utils/comment';
 
 import './index.css'
 
-const initialContainerBackgroundClassNames = [
-  'amber',
-  'blue',
-  'orange',
-  'emerald',
-  'teal',
-  'red',
-  'light-blue',
-]
-
 class Comments extends Component {
   state = {
     // state lainnya...
@@ -25,11 +15,11 @@ class Comments extends Component {
     nameInput: '',
     commentInput: '',
     commentsList: []
-
   }
 
   // Handler lainnya...
 
+  // Method untuk menangani pengiriman formulir komentar
   onFormSubmit = async (event) => {
     event.preventDefault();
     const { commentInput } = this.state;
@@ -50,7 +40,9 @@ class Comments extends Component {
         console.error('Error saat mengirim komentar:', error);
     }
   }
-Comment = commentId => {
+
+  // Method untuk menghapus komentar berdasarkan ID
+  deleteComment = commentId => {
     const {commentsList} = this.state
 
     this.setState({
@@ -58,6 +50,7 @@ Comment = commentId => {
     })
   }
 
+  // Method untuk menambah/menghapus "Like" pada komentar
   toggleIsLiked = id => {
     this.setState(prevState => ({
       commentsList: prevState.commentsList.map(eachComment => {
@@ -68,8 +61,8 @@ Comment = commentId => {
       }),
     }))
   }
-  
- 
+
+  // Method untuk merender daftar komentar
   renderCommentsList = () => {
     const { commentsList } = this.state;
   
@@ -82,47 +75,47 @@ Comment = commentId => {
       />
     ));
   }
+
+  // Method untuk mengubah nilai state saat input komentar berubah
   onChangeCommentInput = event => {
     this.setState({
       commentInput: event.target.value,
     })
   }
 
-
-
-
   render() {
- 
     const {nameInput, commentInput, commentsList} = this.state
     const user = localStorage.getItem("user");
     const id = localStorage.getItem("cagarbudayaId");
+
+    // Cek apakah pengguna telah login
     if (!user) {
+      // Tampilkan tampilan komentar jika pengguna tidak login
       return (
         <div className="app-container">
-        <div className="comments-container">
-          <h1 className="app-heading">Komentar</h1>
-        
-          <hr className="line" />
-          <p className="heading">
-           
-            Comments
-          </p>
-          <ul className="comments-list">       {/* {this.renderCommentsList()} */}
-
-<CommentItem/>
-</ul>
+          <div className="comments-container">
+            <h1 className="app-heading">Komentar</h1>
+            <hr className="line" />
+            <p className="heading">
+              Comments
+            </p>
+            <ul className="comments-list">
+              <CommentItem/>
+            </ul>
+          </div>
         </div>
-      </div>
       )
-  }
+    }
+
+    // Tampilkan tampilan komentar lengkap jika pengguna login
     return (
       <div className="app-container">
         <div className="comments-container">
           <h1 className="app-heading">Comments</h1>
           <div className="comments-inputs">
+            {/* Form untuk menambahkan komentar */}
             <form className="form" onSubmit={this.onFormSubmit}>
- <h2>{user}</h2>
-      
+              <h2>{user}</h2>
               <textarea
                 placeholder="Your Comment"
                 className="comment-input"
@@ -144,14 +137,11 @@ Comment = commentId => {
           </div>
           <hr className="line" />
           <p className="heading">
-          
             Comments
           </p>
+          {/* Render daftar komentar */}
           <ul className="comments-list">
-          {/* {this.renderCommentsList()} */}
-
-          <CommentItem/>
-         
+            <CommentItem/>
           </ul>
         </div>
       </div>
