@@ -1,58 +1,58 @@
 import React, { useEffect, useState } from 'react';
-import { formatDistanceToNow } from 'date-fns'; // Importing a utility for date formatting
-import { getCommentById } from '../../utils/comment'; // Importing a function to fetch comments
+import { formatDistanceToNow } from 'date-fns'; // Mengimpor utilitas untuk format tanggal
+import { getCommentById } from '../../utils/comment'; // Mengimpor fungsi untuk mengambil komentar
 import './index.css';
 
 const CommentItem = () => {
-  const [comments, setComments] = useState([]); // State for storing comments
-  const [error, setError] = useState(null); // State for storing any errors
-  const cagarbudayaId = localStorage.getItem("cagarbudayaId"); // Fetching an ID from localStorage
+  const [comments, setComments] = useState([]); // State untuk menyimpan komentar
+  const [error, setError] = useState(null); // State untuk menyimpan error
+  const cagarbudayaId = localStorage.getItem("cagarbudayaId"); // Mengambil ID dari localStorage
 
-  // useEffect hook to fetch comments when the component mounts or cagarbudayaId changes
+  // useEffect hook untuk mengambil komentar saat komponen di-mount atau cagarbudayaId berubah
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const response = await getCommentById(cagarbudayaId); // Fetching comments
-        setComments(response); // Setting the fetched comments to state
+        const response = await getCommentById(cagarbudayaId); // Mengambil komentar
+        setComments(response); // Menetapkan komentar yang diambil ke state
       } catch (err) {
-        setError(err.message); // Handling errors
+        setError(err.message); // Menangani error
       }
     };
 
     fetchComments();
-  }, [cagarbudayaId]); // Dependency array containing cagarbudayaId
+  }, [cagarbudayaId]); // Array dependensi yang berisi cagarbudayaId
 
-  // Rendering an error message if there is an error
+  // Menampilkan pesan error jika ada error
   if (error) {
     return <div>Error: {error}</div>;
   }
 
-  // Rendering the list of comments
+  // Menampilkan daftar komentar
   return (
     <ul>
-      {comments.length > 0 ? ( // Checking if there are comments
-        comments.map(comment => { // Mapping each comment to a JSX element
-          const initial = comment.body ? comment.body[0].toUpperCase() : ''; // Getting the first initial of the comment body
+      {comments.length > 0 ? ( // Memeriksa jika ada komentar
+        comments.map(comment => { // Memetakan setiap komentar menjadi elemen JSX
+          const initial = comment.body ? comment.body[0].toUpperCase() : ''; // Mendapatkan inisial dari isi komentar
 
           return (
-            <li key={comment.id} className="comment-item"> // List item for each comment
+            <li key={comment.id} className="comment-item"> // Item daftar untuk setiap komentar
               <div className="comment-container">
                 <div className="initial-container">
-                  <p className="initial">{initial}</p> // Displaying the initial
+                  <p className="initial">{initial}</p> // Menampilkan inisial
                 </div>
                 <div>
                   <div className="username-time-container">
-                  <p className="username">{comment.user.username}</p> // Displaying the username
+                  <p className="username">{comment.user.username}</p> // Menampilkan nama pengguna
                   </div>
-                  <p className="comment">{comment.body}</p> // Displaying the comment body
+                  <p className="comment">{comment.body}</p> // Menampilkan isi komentar
                 </div>
               </div>
-              <hr className="comment-line" /> // Horizontal line for separating comments
+              <hr className="comment-line" /> // Garis horizontal untuk memisahkan komentar
             </li>
           );
         })
       ) : (
-        <div>No comments to display</div> // Message displayed when there are no comments
+        <div>Tidak ada komentar untuk ditampilkan</div> // Pesan yang ditampilkan ketika tidak ada komentar
       )}
     </ul>
   );
